@@ -27,7 +27,7 @@ const meta = {
       description: 'Disables the input',
       table: {
         defaultValue: {
-          summary: false,
+          summary: 'false',
         },
       },
     },
@@ -37,12 +37,14 @@ const meta = {
       description: 'Marks the input as required',
       table: {
         defaultValue: {
-          summary: false,
+          summary: 'false',
         },
       },
     },
   },
-} as Meta<typeof Input>;
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof Input>;
+
+export const Default: Story = {};
